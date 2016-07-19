@@ -1,0 +1,88 @@
+.oculus {
+	@include clearfix;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		width: 100%;
+		list-style: none;
+		background: #282828;
+	    height: 300px;
+	    overflow: hidden;
+	    position: relative;
+
+		@include breakpoint(767) {
+			float: left;
+			width: 33.3333%;
+		};
+
+		&:first-child .featured_img {
+	    	background-image: url("../img/oculus/eve-valkyrie.jpg");
+	    }
+
+	    &:nth-child(2) .featured_img {
+	    	background-image: url("../img/oculus/luckys-tale.jpg");
+	    }
+
+	    &:last-child .featured_img {
+	    	background-image: url("../img/oculus/oc3-stage-image.jpg");
+	    }
+
+	    &:hover {
+	    	.featured_img {
+    		    opacity: .8;
+			    transform: scale(1.1, 1.1);
+	    	}
+	    }
+	}
+
+	a {
+		display: block;
+	    color: #8d8e8f;
+
+	    &, &:hover, &:visited {
+	    	text-decoration: none;
+	    }
+	}
+
+	.featured_img {
+		background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    height: 300px;
+	    opacity: .3;
+	    text-align: center;
+	    transition: transform .3s, opacity .3s;
+	    width: 100%;
+	}
+
+	.featured_text {
+		padding: 0 32px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 100%;
+
+		h4 {
+			color: #a4a5a6;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 2px;
+			line-height: 16px;
+			margin: 0;
+			text-align: center;
+		}
+
+		h3 {
+			color: #fff;
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 28px;
+			margin: 0;
+			text-align: center;
+		}
+	}
+}

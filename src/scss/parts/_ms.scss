@@ -1,0 +1,198 @@
+.ms {
+	background: #fff;
+
+	nav {
+		width: 100%;
+		max-width: 1600px;
+		margin: 0 auto;
+		min-height: 48px;
+
+		@include breakpoint(899) {
+			width: 90%;
+		};
+	}
+
+	.logo {
+		margin-top: 13px;
+		float: left;
+
+		img {
+			height: 23px;
+		}
+
+		@include breakpoint(898, max) {
+			padding-left: 10px;
+		};
+	}
+
+	.nav {
+		margin-left: 18px;
+		float: left;
+		line-height: 48px;
+
+		@include breakpoint(898, max) {
+			display: none;
+			margin-left: 0;
+			margin-top: 48px;
+			float: none;
+			position: absolute;
+			right: 0;
+			z-index: 5;
+			background: #f1f1f1;
+
+			&.opened {
+				display: block;
+			}
+		};
+	}
+
+	.nav-main {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		a {
+			display: block;
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.label, a {
+			line-height: 48px;
+		    font-size: 15px;
+		}
+
+		.label {
+			cursor: pointer;
+			position: relative;
+			&:after {
+				content: "›";
+				margin-left: 10px;
+				display: inline-block;
+			}
+		}
+
+		ul {
+			padding-bottom: 10px;
+		}
+
+		& > li {
+			float: left;
+			position: relative;
+
+			& > .label,
+			& > a {
+				padding: 0 22px;
+			}
+
+			&.dd > .label {
+				&:after {
+					transform: rotate(90deg);
+				}
+			}
+
+			&:hover,
+			&.active {
+				& > .label,
+				& > a {
+					background: #f1f1f1;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+			.dropdown {
+				display: none;
+				position: absolute;
+				width: 238px;
+				z-index: 5;
+				background: #f1f1f1;
+
+				& > ul {
+					list-style: none;
+					padding-left: 0;
+
+					& > li {
+						.label, a {
+							padding-left: 20px;
+						}
+						&:hover {
+							.label,	a {
+								background: #e5e5e5;
+							}
+						}
+
+						.label {
+							&:after {
+								float: right;
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+
+				.dropdown {
+					display: none;
+					left: 238px;
+					top: 0;
+					background: #e5e5e5;
+
+					li {
+						&:hover {
+							.label, a {
+								background: #d9d9d9;
+							}
+						}
+					}
+				}
+			}
+
+			&.active {
+				.dropdown {
+					display: block;
+					li {
+						&:hover {
+							.dropdown {
+								display: block;
+							}
+						}
+					}
+					.dropdown {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-mob {
+		display: none;
+		float: right;
+		width: 48px;
+		line-height: 48px;
+		margin-right: 20px;
+		cursor: pointer;
+		overflow: hidden;
+
+		&:after {
+			content: "≡";
+			display: block;
+			transform: scale(3, 1.5);
+			text-align: center;
+		}
+
+		@include breakpoint(898, max) {
+			// display: block;
+		};
+
+		&:hover,
+		&.opened {
+		    background: #f1f1f1;
+		}
+	}
+}

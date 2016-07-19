@@ -1,0 +1,161 @@
+.invision {
+	background: #323a45;
+    text-align: center;
+    padding: 160px 0 145px;
+    font-family: "OpenSans", "open-sans", sans-serif;
+
+    .inside {
+    	max-width: 1320px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding: 0 20px;
+	    clear: both;
+    }
+
+    h2 {
+	    color: white;
+	    font: 30px/52px "OpenSansLight", "open-sans", sans-serif;
+	    margin-bottom: 55px;
+	    margin-top: 0;
+    }
+
+    strong {
+    	font-weight: 700;
+    }
+
+    form {
+        display: inline-block;
+        margin-bottom: 31px;
+
+        p {
+            position: relative;
+            float: left;
+            margin: 0;
+
+            input[type=text],
+            input[type=password],
+            input[type=email] {
+                width: 280px;
+                height: 63px;
+                padding-left: 48px;
+                &:focus {outline: none;}
+                &.error {border-color: #ff3366;}
+
+                @include breakpoint(1245, max) { width: 270px; };
+                @include breakpoint(1170, max) { width: 230px; };
+            }
+
+            i {
+                position: absolute;
+                top: 18px;
+                left: 15px;
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 18px;
+            color: #8a959e;
+            margin: 16px 0px 0px 50px;
+            font-weight: 400;
+        }
+
+        input, textarea {
+            font-size: 18px;
+            line-height: 1em;
+            color: #8a959e;
+        }
+
+        input[type=text],
+        input[type=search],
+        input[type=email],
+        input[type=password] {
+            background: white;
+            width: 232px;
+            line-height: 1em;
+            border-radius: 3px;
+            padding: 18px 15px;
+            margin-right: 10px;
+            border: 1px solid #d4d7da;
+        }
+
+        label.error {
+        	display: none !important;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.8em;
+        color: #747c83;
+
+        &.button button {
+            display: inline-block;
+            padding: 21px 40px 19px;
+            background: #ff3366;
+            border: 0;
+            border-radius: 5px;
+            color: white;
+            font-size: 15px;
+            line-height: 1em;
+            font-family: "brandon-grotesque", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+            height: 62px;
+            margin-top: 1px;
+
+            @include breakpoint(1245, max) {
+            	padding: 20px;
+            };
+        }
+    }
+
+    .terms {
+    	font-size: 12px;
+    	margin: 0;
+
+    	a {
+    		color: #747c83;
+		    text-decoration: underline;
+    	}
+    }
+
+    .ico-user {
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+        width: 24px;
+        background-image: url('../img/invision/global-s116e8c6936.png');
+        background-position: 0 -474px;
+        background-repeat: no-repeat;
+    }
+
+    .ico-email {
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+        width: 24px;
+        background-image: url('../img/invision/global-s116e8c6936.png');
+        background-position: 0 -386px;
+        background-repeat: no-repeat;
+    }
+
+    .ico-lock {
+        display: inline-block;
+        vertical-align: middle;
+        height: 24px;
+        width: 24px;
+        background-image: url('../img/invision/global-s116e8c6936.png');
+        background-position: 0 -430px;
+        background-repeat: no-repeat;
+    }
+
+    form input.error, form textarea.error {
+        border-color: #ff3366;
+        box-shadow: 0 0 0 1px #ff3366;
+    }
+}

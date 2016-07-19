@@ -1,0 +1,193 @@
+.dropbox {
+    background: #f7f7f7;
+    position: relative;
+	font-family: "OpenSansLight";
+	overflow: hidden;
+
+	.background {
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+
+		@include breakpoint(400) {
+			background-image: url("../img/dropbox/background--pc--female-vfl1oeEA8.jpg");
+			background-position: 300px center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		};
+
+		@include breakpoint(600) {
+			background-position: 370px center;
+		    background-repeat: no-repeat;
+		};
+
+		@include breakpoint(1019) {
+			background-size: contain;
+		};
+
+		@include breakpoint(1201) {
+			width: 1770px;
+			position: absolute;
+			left: 50%;
+			margin-left: -885px;
+			background-position: right center;
+		};
+
+		@include breakpoint(1750) {
+			margin-left: -785px;
+		};
+	}
+
+	.dp-content {
+		margin: 0 auto;
+		max-width: 990px;
+		position: relative;
+		padding: 20px;
+		min-height: 400px;
+		z-index: 2;
+	    box-sizing: content-box;
+
+		@include breakpoint(400) {
+			text-align: left;
+		    margin: 0;
+		    padding-top: 45px;
+		    padding-bottom: 45px;
+		};
+
+		@include breakpoint(768) {
+			text-align: left;
+		    padding-top: 75px;
+		    padding-bottom: 75px;
+		    min-height: 550px;
+		};
+
+		@include breakpoint(991) {
+			position: relative;
+			margin: 0 auto;
+		};
+	}
+
+	.content-body {
+		position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	.header,
+	.sub-header {
+		font-weight: 100;
+		margin-bottom: 20px;
+		margin: 0 auto;
+		color: #47525d;
+		@include breakpoint(400) {
+			width: 300px;
+		    margin-left: 0;
+		    margin-right: 0;
+		    text-align: left;
+		};
+		@include breakpoint(600) {width: 400px};
+		@include breakpoint(768) {width: 450px};
+	}
+
+	.header {
+		
+
+		font-size: 47.25px;
+	    max-width: 520px;
+	    padding-bottom: 0;
+	    margin-bottom: 20px;
+
+	    @include breakpoint(1200, max) {
+	    	font-size: 31px;
+	    	max-width: 350px;
+	    };
+
+	    @include breakpoint(767, max) {
+	    	font-size: 26px;
+	    	text-align: center;
+	    };
+	}
+
+	.sub-header {
+		font-size: 21px;
+	    font-weight: 400;
+	    padding-bottom: 20px;
+	    line-height: 1.5;
+
+	    @include breakpoint(1200, max) {
+	    	font-size: 16px;
+	    	max-width: 330px;
+	    };
+
+	    @include breakpoint(767, max) {
+	    	text-align: center;
+	    };
+	}
+
+	.business-but {
+		float: left;
+	    margin: 30px 0 0 0;
+	    text-align: center;
+	    background: none;
+
+	    @include breakpoint(1200, max) {
+	    	margin-top: 40px;
+	    };
+
+	    @include breakpoint(767, max) {
+	    	float: none;
+	    };
+
+	    & > a {
+	    	min-width: 0;
+	    	min-height: 0;
+	    	margin: 0;
+	    	padding: 19px 26px;
+	    	font-size: 21px;
+	    	line-height: 21px;
+	    	background: #0071e0;
+	    	color: #fff;
+	    	display: block;
+	    	text-align: center;
+	    	border: none;
+	    	border-radius: 6px;
+	    	text-decoration: none;
+	    	font-weight: bold;
+
+	    	&:hover {
+	    		background: lighten(#0071e0, 20%)
+	    	}
+
+	    	@include breakpoint(1200, max) {
+	    		font-size: 16px;
+    		    padding: 14px 40px;
+	    	};
+
+	    	@include breakpoint(767, max) {
+	    		display: inline-block;
+	    	};
+	    }
+
+	    span {
+	    	margin-top: 15px;
+	    	font-size: 16px;
+	    	color: #47525d;
+	    	text-align: left;
+	    	margin-bottom: 0;
+	    	display: block;
+
+	    	@include breakpoint(767, max) {
+    		    text-align: center;
+	    	};
+
+	    	a {
+	    		border-bottom: 1px solid #0071e0;
+    		    color: #0071e0;
+    		    text-decoration: none;
+	    	}
+	    }
+	}
+}
