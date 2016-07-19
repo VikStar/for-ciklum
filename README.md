@@ -1,1 +1,1 @@
-# for-ciklum
+# for Ciklum contest
