@@ -1069,3 +1069,11 @@ textarea {
       margin-top: 1px; }
     .apple .footer .footer-legal a:hover {
       text-decoration: underline; }
+
+#gh {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 99; }
+  #gh img {
+    width: 128px; }
