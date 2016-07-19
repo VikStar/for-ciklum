@@ -1,1 +1,1 @@
-# for Ciklum contest
+# for Ciklum contest - (demo)[https://vikstar.github.io/for-ciklum/]
